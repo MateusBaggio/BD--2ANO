@@ -1,0 +1,55 @@
+create database LojaDB
+
+use LojaDB
+
+create table clientes(
+	id int identity(1,1) primary key,
+	nome varchar(100) not null,
+	email varchar(150) not null,
+	DatadeCadastro date
+)
+
+create table Produtos(
+	id int identity(1,1) primary key,
+	nomeProduto varchar(100),
+	DataCadastro float
+)
+
+
+Insert into clientes (nome, email, DatadeCadastro)
+values ('Mateus','mateussbaggio@gmail.com', '2024-01-01')
+Insert into clientes (nome, email, DatadeCadastro)
+values ('Abdalla','abdalladib@gmail.com', '2023-11-15')
+Insert into clientes (nome, email, DatadeCadastro)
+values ('Pedro','pedrokarkar@ciac.com.br', '2024-02-01')
+
+-- Concerto de erro na insercção da tabela
+alter table Produtos
+drop column DataCadastro
+
+alter table Produtos add Preco float;
+----------------------------------------
+
+
+
+insert into Produtos (nomeProduto, Preco)
+values('catarro', 0.99)
+insert into Produtos (nomeProduto, Preco)
+values('esfiha', 8.50)
+insert into Produtos (nomeProduto, Preco)
+values('VictorInox', 1300.00)
+
+update Produtos set Preco = 1.00
+where Preco = 0.99
+update Clientes set nome = 'Pedro Antonio'
+where id = 3
+
+delete from Clientes
+where nome = 'Mateus'
+
+delete from Produtos
+where nomeProduto = 'Catarro'
+
+
+select * from Produtos
+select * from clientes
