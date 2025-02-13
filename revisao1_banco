@@ -53,3 +53,31 @@ where nomeProduto = 'Catarro'
 
 select * from Produtos
 select * from clientes
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+--ex2
+
+create database exercicios
+
+use exercicios
+
+CREATE TABLE VEICULOS(
+	PLACA CHAR(8) PRIMARY KEY,
+	MARCA VARCHAR ()
+
+)
+
+
+CREATE TABLE MULTAS(
+
+)
+
+CREATE TABLE AUTUACAO(
+
+)
+
+
